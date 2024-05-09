@@ -19,8 +19,8 @@ export async function loadFileContent(slug) {
       .map(async (file) => {
         const content = await readFile(file, { encoding: "utf8" });
         const path = option
-          ? file.match(/[^\\]+$/)[0]
-          : file.match(/examples\\([^\\]+)\\/)[1];
+          ? file.match(/[^\\/]+$/)[0]
+          : file.match(/examples[\\/]([^\\/]+)[\\/]/)[1];
 
         return { path, content };
       })
