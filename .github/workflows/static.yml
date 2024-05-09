@@ -43,6 +43,9 @@ jobs:
         uses: actions/configure-pages@v5
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
+        env:
+          ASTRO_SITE: https://idea-pool.github.io/
+          ASTRO_BASE: js-assertion-cheat-sheet-astro
         with:
           # Upload entire repository
           path: 'dist'
