@@ -42,7 +42,7 @@ jobs:
         env:
           ASTRO_SITE: https://idea-pool.github.io/
           ASTRO_BASE: js-assertion-cheat-sheet-astro
-          PUBLIC_VERSION: 0.0.1-${GITHUB_REF#refs/heads/.${GITHUB_SHA}
+          PUBLIC_VERSION: v0.0.1-${{ github.sha }}
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
